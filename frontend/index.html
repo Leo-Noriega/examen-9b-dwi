@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front</title>
+</head>
+<body>
+    <h1>Hola desde el Frontend</h1>
+    <button onclick="hello()">Pica este boton</button>
+</body>
+<script>
+    function hello() {
+        fetch('http://localhost:8080/')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+</html>
